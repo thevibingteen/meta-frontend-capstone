@@ -1,0 +1,215 @@
+/* Define color properties */
+@property --color-primary {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #495e57;
+}
+
+@property --color-secondary {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #f4ce14;
+}
+
+@property --color-background {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #fff;
+}
+
+/* Define font-size properties */
+@property --font-size-h1 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 2.25rem;
+}
+
+@property --font-size-h2 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1.5rem;
+}
+
+@property --font-size-h3 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1.25rem;
+}
+
+@property --font-size-body {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1rem;
+}
+
+@property --font-size-caption {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0.875rem;
+}
+
+/* Define spacing properties */
+@property --spacing-small {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0.5rem;
+}
+
+@property --spacing-medium {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1rem;
+}
+
+@property --spacing-large {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 2rem;
+}
+
+:root {
+    /* Colors */
+    --color-green: #495e57;
+    --color-yellow: #f4ce14;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #f8f9fa;
+    --color-disabled: #ced4da;
+
+    --color-primary: var(--color-green);
+    --color-secondary: var(--color-yellow);
+    --color-text: var(--color-black);
+    --color-background: var(--color-white);
+    --color-border: var(--color-gray);
+
+    /* Fonts */
+    --font-primary: 'Helvetica', sans-serif;
+    --font-secondary: 'Crimson Text', serif;
+
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+
+    /* Border Radius */
+    --border-radius: 0.25rem;
+
+    /* Animations */
+    --transition-duration: 400ms;
+
+    --container-max-width: 80rem;
+
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --font-size-body: 1rem;
+    --font-size-caption: 0.875rem;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body,
+html {
+    opacity: 0;
+    will-change: opacity;
+    animation: fadeIn var(--transition-duration) ease-in-out forwards;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Crimson Text', serif;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: semi-bold;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: var(--font-size-body);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+small {
+    font-size: var(--font-size-caption);
+    line-height: 1.4;
+}
+
+main {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: auto;
+
+    padding-inline: 0.5rem;
+}
+
+@media (min-width: 1296px) {
+    .container {
+        padding-inline: unset;
+    }
+}

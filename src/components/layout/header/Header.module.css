@@ -1,0 +1,83 @@
+.header {
+    padding: 0.5rem 0;
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctaButtons {
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.desktopNavigation {
+    display: none;
+}
+
+.mobileMenuButton {
+    appearance: none;
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+
+    span {
+        position: relative;
+        top: 0;
+        display: block;
+        height: 0.25rem;
+        width: 100%;
+        background-color: var(--color-black);
+        will-change: transform, top, width, opacity;
+        transition:
+            top var(--transition-duration) ease,
+            transform var(--transition-duration) ease,
+            width var(--transition-duration) ease;
+    }
+
+    &.open span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 0.5rem;
+        width: 120%;
+    }
+
+    &.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -0.5rem;
+        width: 120%;
+    }
+}
+
+@media (min-width: 768px) {
+    .desktopNavigation {
+        display: flex;
+    }
+
+    .mobileMenuButton {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ctaButtons {
+        display: flex;
+    }
+}

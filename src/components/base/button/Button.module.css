@@ -1,0 +1,58 @@
+.button {
+    --button-background-color: var(--color-primary);
+    --button-border-color: var(--color-black);
+    --button-color: var(--color-white);
+
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-small);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: 1px solid var(--button-border-color);
+
+    border-radius: var(--border-radius);
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+
+    font: inherit;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    touch-action: manipulation;
+
+    transition:
+        background-color var(--transition-duration),
+        color var(--transition-duration);
+
+    &:not(:disabled):hover {
+        --button-background-color: var(--color-secondary);
+        --button-color: var(--color-text);
+    }
+
+    &:disabled {
+        --button-background-color: var(--color-disabled);
+        --button-border-color: var(--color-disabled);
+        --button-color: var(--color-white);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+.buttonSecondary {
+    --button-background-color: var(--color-secondary);
+    --button-color: var(--color-text);
+
+    &:not(:disabled):hover {
+        --button-background-color: var(--color-white);
+        --button-color: var(--color-black);
+    }
+}

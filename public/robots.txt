@@ -1,0 +1,5 @@
+# Allow all other pages to be crawled
+Allow: /
+
+# Sitemap location
+Sitemap: https://wrs-react-capstone.netlify.app/sitemap.xml

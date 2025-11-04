@@ -1,0 +1,40 @@
+.innerContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    > * {
+        max-width: 95%;
+        order: 2;
+
+        &:last-child {
+            order: 1;
+        }
+    }
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.subTitle {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.ctaButton {
+    margin-top: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .innerContainer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        > * {
+            flex: 0 0 45%;
+            order: unset;
+        }
+    }
+}
