@@ -2,4 +2,4 @@
 Allow: /
 
 # Sitemap location
-Sitemap: https://wrs-react-capstone.netlify.app/sitemap.xml
+Sitemap: https://meta-frontend-capstone-red.vercel.app/sitemap.xml
