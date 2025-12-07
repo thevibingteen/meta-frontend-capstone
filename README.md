@@ -34,7 +34,6 @@ This capstone project is the culmination of the skills developed throughout the 
 - End-to-end testing with Cypress.
 - Performance optimization, accessibility compliance, and modern development practices.
 
-The project is deployed on Netlify and can be accessed [here](https://wrs-react-capstone.netlify.app/).
 
 ---
 
@@ -66,13 +65,13 @@ The project is deployed on Netlify and can be accessed [here](https://wrs-react-
 1. Clone the repository:
 
 ```bash
-   git clone https://github.com/WesleySmits/Meta-Front-End-Developer-Capstone-Project.git
+   git clone https://github.com/thevibingteen/meta-frontend-capstone.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-   cd Meta-Front-End-Developer-Capstone-Project
+   cd meta-frontend-capstone.git
 ```
 
 3. Install dependencies:
@@ -109,6 +108,4 @@ The project is deployed on Netlify and can be accessed [here](https://wrs-react-
 
 ---
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
